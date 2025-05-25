@@ -58,7 +58,7 @@ npm run deploy
 
 Após o deploy, seu site estará disponível em:
 ```
-https://[seu-usuario].github.io/Contador-jogos/
+https://[seu-usuario].github.io/Contador-jogos./
 ```
 
 Substitua `[seu-usuario]` pelo seu nome de usuário do GitHub.
@@ -69,7 +69,7 @@ A partir de agora, sempre que você fizer push na branch `main`, o site será au
 
 ## ⚠️ Observações Importantes
 
-1. **Nome do repositório**: O projeto está configurado para funcionar com um repositório chamado `Contador-jogos`. Se você renomeou o repositório, atualize o campo `base` no arquivo `vite.config.ts`.
+1. **Nome do repositório**: O projeto está configurado para funcionar com um repositório chamado `Contador-jogos.` (com ponto no final). Se você renomeou o repositório, atualize o campo `base` no arquivo `vite.config.ts`.
 
 2. **Branch principal**: O deploy automático está configurado para a branch `main`. Se sua branch principal tem outro nome (como `master`), atualize o arquivo `.github/workflows/deploy.yml`.
 
