@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Player Timer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for better aesthetics if needed, but Tailwind generally handles this well */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2d3748; /* dark-gray-800 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4a5568; /* dark-gray-600 */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #718096; /* dark-gray-500 */
+    }
+    /* Ensure body takes full height and has a dark background */
+    body {
+      min-height: 100vh;
+      background-color: #1a202c; /* Tailwind's gray-900 */
+      color: #e2e8f0; /* Tailwind's gray-300 */
+      display: flex; /* Use flex to manage layout */
+      flex-direction: column; /* Stack children vertically */
+      align-items: center; /* Center children horizontally */
+    }
+    #root {
+      width: 100%;
+      max-width: 1200px; /* Max width for the app content */
+      margin: 0 auto; /* Horizontal centering */
+      padding-top: 1rem; /* Add some padding at the top */
+      padding-bottom: 1rem; /* Add some padding at the bottom */
+      flex-grow: 1; /* Allow root to grow and fill available space */
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+</head>
+<body>
+  <!-- Audio elements can be here or managed within React components if preferred -->
+  <!-- <audio id="alarm-sound" src="/alarm.mp3" preload="auto"></audio> -->
+  <!-- <audio id="tick-sound" src="/tick.mp3" preload="auto"></audio> -->
+  <!-- <audio id="complete-sound" src="/complete.mp3" preload="auto"></audio> -->
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
+<link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

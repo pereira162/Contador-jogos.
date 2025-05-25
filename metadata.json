@@ -1,0 +1,6 @@
+{
+  "name": "Multi-Player Timed Game Clock with Ranking",
+  "description": "A configurable timer application for games with 2 to 8 players, similar to a chess clock. Features include individual time tracking, customizable increments, timeout handling, undo functionality, and a persistent ranking system. The ranking system groups games by player names, tracks wins, and allows for game naming and notes.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
