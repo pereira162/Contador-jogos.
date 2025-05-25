@@ -2,9 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <title>Multi-Player Timer</title>
+  <!-- Google Fonts - Poppins (jovial and modern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
     /* Custom scrollbar for better aesthetics if needed, but Tailwind generally handles this well */
     ::-webkit-scrollbar {
@@ -23,21 +40,50 @@
     /* Ensure body takes full height and has a dark background */
     body {
       min-height: 100vh;
+      height: 100%;
       background-color: #1a202c; /* Tailwind's gray-900 */
       color: #e2e8f0; /* Tailwind's gray-300 */
       display: flex; /* Use flex to manage layout */
       flex-direction: column; /* Stack children vertically */
       align-items: center; /* Center children horizontally */
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+    html {
+      height: 100%;
+      overflow-x: hidden;
     }
     #root {
       width: 100%;
+      height: 100vh;
+      min-height: 100vh;
       max-width: 1200px; /* Max width for the app content */
       margin: 0 auto; /* Horizontal centering */
-      padding-top: 1rem; /* Add some padding at the top */
-      padding-bottom: 1rem; /* Add some padding at the bottom */
+      padding: 0.5rem; /* Reduced padding for small screens */
       flex-grow: 1; /* Allow root to grow and fill available space */
       display: flex;
       flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    /* Media queries for very small screens (pop-up/multi-window) */
+    @media (max-width: 480px), (max-height: 480px) {
+      #root {
+        padding: 0.25rem;
+        max-width: 100%;
+      }
+      body {
+        font-size: 14px;
+      }
+    }
+    
+    /* Ensure app works in landscape orientation on small screens */
+    @media (max-height: 600px) and (orientation: landscape) {
+      #root {
+        padding: 0.25rem;
+      }
     }
   </style>
 
@@ -50,7 +96,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/Contador-jogos./assets/index-B795ezUD.js"></script>
+  <script type="module" crossorigin src="./assets/index-Cyfs_8El.js"></script>
 </head>
 <body>
   <!-- Audio elements can be here or managed within React components if preferred -->
