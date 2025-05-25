@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
     return {
-      base: '/Contador-jogos/',
+      base: '/Contador-jogos./',
       css: {
         postcss: './postcss.config.js',
       },
